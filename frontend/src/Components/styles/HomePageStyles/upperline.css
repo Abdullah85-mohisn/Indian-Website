@@ -1,0 +1,135 @@
+.upperline-container
+{
+    background-color: black;
+    width: 100%;
+    height: 50px;
+}
+
+.upperline-midcontainer
+{
+    width: 90%;
+    margin: 0 auto;
+    height: 50px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.upperline-left, .upperline-right
+{
+   display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #1a1a1a; */
+  padding: 5px 0;
+  /* gap: 20px;  */
+  cursor: pointer;
+}
+
+.upperline-innerleft, .upperline-innerright
+{
+    /* background-color: red; */
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.upperline-innerleft:hover, .upperline-innerright:hover
+{
+    background-color: #4e0310;
+    cursor: pointer;
+    /* height: 50px; */
+}
+
+.upperline-rightright
+{
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.upperline-rightright img
+{
+  height: 30px;
+  width: 30px;
+}
+
+.upperline-rightright:hover
+{
+    background-color: #4e0310;
+    cursor: pointer;
+}
+
+.upperline-innerleft a,
+.upperline-innerright a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 13px;
+  /* background-color: red; */
+  height: 50px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.vertical-divider {
+  width: 1px;
+  height: 50px;
+  background-color: white;
+}
+
+.upperline-rightright
+{
+    color: white;
+    font-weight: bold;
+    font-size: 13px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.upperline-rightright p
+{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.upperline-rightright i
+{
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+@media (max-width: 768px) {
+  .upperline-container {
+    height: auto;
+  }
+
+  .upperline-midcontainer {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    /* padding: 10px 0; */
+    /* gap: 10px; */
+  }
+
+  .upperline-left,
+  .upperline-right {
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    padding: 0px;
+    width: 100%;
+  }
+
+  .horizontal-divider
+  {    
+    width: 100%;
+    height: 1px;
+    background-color: white;
+
+  }
+
+}
+
+

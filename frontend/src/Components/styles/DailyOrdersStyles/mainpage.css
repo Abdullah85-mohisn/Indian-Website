@@ -1,0 +1,28 @@
+.corner-images {
+  position: fixed;
+  bottom: 20px;
+  right: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 999; 
+  /* background-color: red; */
+  /* margin-right: 20px; */
+}
+
+.corner-images img {
+  width: 130px;
+  height: 130px;
+  height: auto;
+  /* opacity: 0.9; */
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+@media (max-width: 900px)
+{
+    .corner-images img {
+  width: 100px;
+  height: 100px;}
+}
+

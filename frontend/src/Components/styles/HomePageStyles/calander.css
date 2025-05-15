@@ -1,0 +1,107 @@
+.calander-container
+{
+    background-color: white;
+    margin-top: 50px;
+    width: 100%;
+    height: auto;
+}
+
+.calander-midcontainer
+{
+    width: 100%;
+    padding: 10px;
+    display: flex;
+}
+
+.calander-left
+{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.calander-buttons
+{
+    display: flex;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.calander-buttons-details
+{
+    background-color: white;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-decoration: none;
+    color: black;
+    
+}
+
+.more-details
+{
+    background-image: linear-gradient(#c85e61, #874665);
+    color: white;
+}
+
+.calander-right
+{
+    width: 50%;
+    margin-left: 50px;
+}
+
+.calander-right img
+{
+    display: flex;
+    justify-content: end;
+}
+
+@media (max-width: 900px)
+{
+    .calander-midcontainer
+    {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .calander-right, .calander-left
+    {
+        width: 100%;
+    }
+
+    .calander-left-img img, .calander-right img
+    {
+        width: 500px;
+    }
+
+    .calander-right
+    {
+        margin-left: 0px;
+    }
+}
+
+@media (max-width: 400px)
+{
+    .calander-left-img img, .calander-right img
+    {
+        width: 350px;
+    }
+
+    .calander-buttons-details
+{
+    background-color: white;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    
+}
+}
