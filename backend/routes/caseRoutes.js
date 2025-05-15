@@ -60,4 +60,46 @@ router.get('/search', async (req, res) => {
     }
 });
 
+router.get('/all', async (req, res) => {
+    try {
+        await connectToDatabase();
+        const allCases = await Case.find();
+        return res.json(allCases);
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ error: 'Failed to fetch cases' });
+    }
+});
+
+router.post('/delete-image', async (req, res) => {
+    const { caseId, imageUrl } = req.body;
+
+    try {
+        await connectToDatabase();
+        const caseDoc = await Case.findById(caseId);
+        if (!caseDoc) return res.status(404).json({ error: 'Case not found' });
+
+        caseDoc.images = caseDoc.images.filter(img => img !== imageUrl);
+        await caseDoc.save();
+
+        res.json({ message: 'Image deleted' });
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ error: 'Error deleting image' });
+    }
+});
+
+router.delete('/delete-case/:id', async (req, res) => {
+    const { id } = req.params;
+    try {
+        await connectToDatabase();
+        await Case.findByIdAndDelete(id);
+        res.json({ message: 'Case deleted' });
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ error: 'Error deleting case' });
+    }
+});
+
+
 module.exports = router;

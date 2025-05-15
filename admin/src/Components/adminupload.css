@@ -62,8 +62,15 @@
     border-radius: 6px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    margin-bottom: 20px;
 }
 
 .adminupload-container button:hover {
     background-color: #0056b3;
 } 
+
+.view-cases
+{
+    font-size: 18px;
+    
+}

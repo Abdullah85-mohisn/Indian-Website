@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import { useForm } from 'react-hook-form';
+import { NavLink } from 'react-router-dom';
 import axios from 'axios';
 import './adminupload.css';
 
@@ -67,6 +68,7 @@ const AdminUploadPage = () => {
                     <input {...register('images', { required: true })} type="file" multiple accept="image/*" />
 
                     <button type="submit">{btnText} {isUploading && <i className="fa-solid fa-spinner fa-spin"></i>}</button>
+                    <NavLink className='view-cases' to='/view-cases'>View Cases</NavLink>
                 </form>
                 
             </div>

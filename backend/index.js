@@ -23,7 +23,7 @@ const app = express();
 
 app.use(cors({
     // origin: 'https://slcu-admin.vercel.app',
-    methods: ['GET', 'POST'],
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true
 }));
 app.use(express.json());
