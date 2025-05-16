@@ -19,52 +19,52 @@ const FormPage = () => {
   //   ctx.fillText(captchaValue, 10, 30);
   // }, [captchaValue]);
 
-//   useEffect(() => {
-//   const canvas = captchaCanvasRef.current;
-//   const ctx = canvas.getContext('2d');
+  //   useEffect(() => {
+  //   const canvas = captchaCanvasRef.current;
+  //   const ctx = canvas.getContext('2d');
 
-//   // Fix for high-DPI displays
-//   const scale = window.devicePixelRatio || 1;
-//   const width = 200;
-//   const height = 80;
+  //   // Fix for high-DPI displays
+  //   const scale = window.devicePixelRatio || 1;
+  //   const width = 200;
+  //   const height = 80;
 
-//   canvas.width = width * scale;
-//   canvas.height = height * scale;
-//   canvas.style.width = `${width}px`;
-//   canvas.style.height = `${height}px`;
+  //   canvas.width = width * scale;
+  //   canvas.height = height * scale;
+  //   canvas.style.width = `${width}px`;
+  //   canvas.style.height = `${height}px`;
 
-//   ctx.setTransform(scale, 0, 0, scale, 0, 0); // scale the drawing context
+  //   ctx.setTransform(scale, 0, 0, scale, 0, 0); // scale the drawing context
 
-//   // Drawing the text
-//   ctx.clearRect(0, 0, width, height);
-//   ctx.font = 'bold 60px Georgia';
-//   ctx.fillStyle = '#333';
-//   ctx.textBaseline = 'middle';
-//   ctx.fillText(captchaValue, 10, height/2);
-// }, [captchaValue]);
+  //   // Drawing the text
+  //   ctx.clearRect(0, 0, width, height);
+  //   ctx.font = 'bold 60px Georgia';
+  //   ctx.fillStyle = '#333';
+  //   ctx.textBaseline = 'middle';
+  //   ctx.fillText(captchaValue, 10, height/2);
+  // }, [captchaValue]);
 
-useEffect(() => {
-  const canvas = captchaCanvasRef.current;
-  const ctx = canvas.getContext('2d');
+  useEffect(() => {
+    const canvas = captchaCanvasRef.current;
+    const ctx = canvas.getContext('2d');
 
-  const scale = window.devicePixelRatio || 1;
-  const width = 180;
-  const height = 80;
+    const scale = window.devicePixelRatio || 1;
+    const width = 180;
+    const height = 80;
 
-  canvas.width = width * scale;
-  canvas.height = height * scale;
-  canvas.style.width = `${width}px`;
-  canvas.style.height = `${height}px`;
+    canvas.width = width * scale;
+    canvas.height = height * scale;
+    canvas.style.width = `${width}px`;
+    canvas.style.height = `${height}px`;
 
-  document.fonts.ready.then(() => {
-    ctx.setTransform(scale, 0, 0, scale, 0, 0);
-    ctx.clearRect(0, 0, width, height);
-    ctx.font = 'bold 60px Georgia';
-    ctx.strokeStyle = '#333';
-    ctx.textBaseline = 'middle';
-    ctx.fillText(captchaValue, 10, height / 2);
-  });
-}, [captchaValue]);
+    document.fonts.ready.then(() => {
+      ctx.setTransform(scale, 0, 0, scale, 0, 0);
+      ctx.clearRect(0, 0, width, height);
+      ctx.font = 'bold 60px Georgia';
+      ctx.strokeStyle = '#333';
+      ctx.textBaseline = 'middle';
+      ctx.fillText(captchaValue, 10, height / 2);
+    });
+  }, [captchaValue]);
 
 
 
@@ -146,10 +146,9 @@ useEffect(() => {
             <input type="text" name="caseNumber" placeholder="Case Number" required />
 
             <label>Case Year*</label>
-            <select name="year" required defaultValue="">
-              <option value="" disabled>Select year</option>
+            <select name="year" required defaultValue="2025">
               {Array.from({ length: 2025 - 2013 + 1 }, (_, i) => {
-                const year = 2013 + i;
+                const year = 2025 - i; // descending order
                 return <option key={year} value={year}>{year}</option>;
               })}
             </select>
