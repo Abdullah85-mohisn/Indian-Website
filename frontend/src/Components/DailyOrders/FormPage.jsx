@@ -10,14 +10,63 @@ const FormPage = () => {
   const [userCaptchaInput, setUserCaptchaInput] = useState('');
   const captchaCanvasRef = useRef(null);
 
-  useEffect(() => {
-    const canvas = captchaCanvasRef.current;
-    const ctx = canvas.getContext('2d');
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.font = '30px Arial';
-    ctx.fillStyle = '#333';
-    ctx.fillText(captchaValue, 10, 30);
-  }, [captchaValue]);
+  // useEffect(() => {
+  //   const canvas = captchaCanvasRef.current;
+  //   const ctx = canvas.getContext('2d');
+  //   ctx.clearRect(0, 0, canvas.width, canvas.height);
+  //   ctx.font = 'bold 30px Georgia';
+  //   ctx.fillStyle = '#333';
+  //   ctx.fillText(captchaValue, 10, 30);
+  // }, [captchaValue]);
+
+//   useEffect(() => {
+//   const canvas = captchaCanvasRef.current;
+//   const ctx = canvas.getContext('2d');
+
+//   // Fix for high-DPI displays
+//   const scale = window.devicePixelRatio || 1;
+//   const width = 200;
+//   const height = 80;
+
+//   canvas.width = width * scale;
+//   canvas.height = height * scale;
+//   canvas.style.width = `${width}px`;
+//   canvas.style.height = `${height}px`;
+
+//   ctx.setTransform(scale, 0, 0, scale, 0, 0); // scale the drawing context
+
+//   // Drawing the text
+//   ctx.clearRect(0, 0, width, height);
+//   ctx.font = 'bold 60px Georgia';
+//   ctx.fillStyle = '#333';
+//   ctx.textBaseline = 'middle';
+//   ctx.fillText(captchaValue, 10, height/2);
+// }, [captchaValue]);
+
+useEffect(() => {
+  const canvas = captchaCanvasRef.current;
+  const ctx = canvas.getContext('2d');
+
+  const scale = window.devicePixelRatio || 1;
+  const width = 180;
+  const height = 80;
+
+  canvas.width = width * scale;
+  canvas.height = height * scale;
+  canvas.style.width = `${width}px`;
+  canvas.style.height = `${height}px`;
+
+  document.fonts.ready.then(() => {
+    ctx.setTransform(scale, 0, 0, scale, 0, 0);
+    ctx.clearRect(0, 0, width, height);
+    ctx.font = 'bold 60px Georgia';
+    ctx.strokeStyle = '#333';
+    ctx.textBaseline = 'middle';
+    ctx.fillText(captchaValue, 10, height / 2);
+  });
+}, [captchaValue]);
+
+
 
   useEffect(() => {
     setCaptchaValue(generateCaptcha());

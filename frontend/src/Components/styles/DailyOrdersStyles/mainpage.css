@@ -26,3 +26,12 @@
   height: 100px;}
 }
 
+@media (max-width: 400px)
+{
+  .corner-images img
+  {
+    width: 60px;
+    height: 60px;
+  }
+}
+
