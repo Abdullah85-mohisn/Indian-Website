@@ -15,7 +15,6 @@ router.post('/upload', async (req, res) => {
         console.log("✅ Connected to MongoDB");
 
         const { caseNumber, year, images } = req.body;
-
         console.log("📦 Received data:", { caseNumber, year, images });
 
         if (!caseNumber || !year || !images || !Array.isArray(images)) {
@@ -100,6 +99,8 @@ router.delete('/delete-case/:id', async (req, res) => {
         res.status(500).json({ error: 'Error deleting case' });
     }
 });
+
+
 
 
 module.exports = router;

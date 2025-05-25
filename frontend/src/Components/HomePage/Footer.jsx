@@ -69,8 +69,8 @@ const Footer = () => {
                 <img src="https://cdn.prod.website-files.com/66fbb785f478abc4a634d141/66ffc51f5560f11af5aef0e7_s3waas.png" alt="img" />
                 <img src="https://cdn.prod.website-files.com/66fbb785f478abc4a634d141/66ffc51f8225c7b2fac45d67_nicLogo.png" alt="img" />
                 <img src="https://cdn.prod.website-files.com/66fbb785f478abc4a634d141/66ffc51f0d4234facd017206_NALSA.png" alt="img" />
-                <img src="https://cdn.prod.website-files.com/66fbb785f478abc4a634d141/66ffc51f4ef4a7a27eca6c5c_SCLSC.jpg" alt="img" />
-                <img src="https://cdn.prod.website-files.com/66fbb785f478abc4a634d141/66ffc51f114bf176c0c95f71_IC-logo.png" alt="img" />
+                <img className='last-img' src="https://cdn.prod.website-files.com/66fbb785f478abc4a634d141/66ffc51f4ef4a7a27eca6c5c_SCLSC.jpg" alt="img" />
+                <img className='last-img' src="https://cdn.prod.website-files.com/66fbb785f478abc4a634d141/66ffc51f114bf176c0c95f71_IC-logo.png" alt="img" />
             </div>
         </div>
     </>

@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { NavLink } from 'react-router-dom';
 import axios from 'axios';
@@ -10,7 +10,7 @@ const AdminUploadPage = () => {
     const [btnText, setbtnText] = useState("Upload");
 
     const onSubmit = async (data) => {
-        setIsUploading(true); 
+        setIsUploading(true);
         setbtnText("Uploading...");
         const imageUrls = [];
 
@@ -65,12 +65,12 @@ const AdminUploadPage = () => {
                     </select>
 
                     <label>Upload Images*</label>
-                    <input {...register('images', { required: true })} type="file" multiple accept="image/*" />
+                    <input {...register('images', { required: true })} type="file" multiple accept="image/*,.pdf" />
 
                     <button type="submit">{btnText} {isUploading && <i className="fa-solid fa-spinner fa-spin"></i>}</button>
                     <NavLink className='view-cases' to='/view-cases'>View Cases</NavLink>
                 </form>
-                
+
             </div>
         </div>
     );

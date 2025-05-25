@@ -94,7 +94,7 @@ const ViewPage = () => {
                 <div key={c._id} className="case-box">
                     <div className="case-header">
                         <div>
-                            <strong>Case:</strong> {c.caseNumber} 
+                            <strong>Case:</strong> {c.caseNumber}
                         </div>
 
                         <div>
