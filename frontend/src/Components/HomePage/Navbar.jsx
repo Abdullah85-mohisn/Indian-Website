@@ -30,7 +30,7 @@ const Navbar = () => {
 
                 <div className="navbar-toprow">
                     <div className="navbar-logo">
-                        <img src="/nabvar-logo.png" alt="Logo" />
+                        <img src="/nabvar-logo-new.png" alt="Logo" />
                     </div>
 
                     <button className="mobile-menu-toggle" onClick={handleMobileMenuToggle}>
