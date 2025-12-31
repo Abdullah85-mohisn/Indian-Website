@@ -147,8 +147,8 @@ const FormPage = () => {
 
             <label>Case Year*</label>
             <select name="year" required defaultValue="2025">
-              {Array.from({ length: 2025 - 2013 + 1 }, (_, i) => {
-                const year = 2025 - i; // descending order
+              {Array.from({ length: 2026 - 2013 + 1 }, (_, i) => {
+                const year = 2026 - i; // descending order
                 return <option key={year} value={year}>{year}</option>;
               })}
             </select>
