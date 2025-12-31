@@ -58,7 +58,7 @@ const AdminUploadPage = () => {
                     <label>Year*</label>
                     <select {...register('year', { required: true })}>
                         <option value="" disabled>Select year</option>
-                        {Array.from({ length: 2025 - 2013 + 1 }, (_, i) => {
+                        {Array.from({ length: 2026 - 2013 + 1 }, (_, i) => {
                             const year = 2013 + i;
                             return <option key={year} value={year}>{year}</option>;
                         })}
