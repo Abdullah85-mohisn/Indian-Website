@@ -4,7 +4,7 @@ import '../styles/HomePageStyles/calander.css';
 
 
 const DynamicCalendar = () => {
-    const [currentDate, setCurrentDate] = useState(new Date('2025-08-01'));
+    const [currentDate, setCurrentDate] = useState(new Date());
     
     const today = new Date();
 
