@@ -27,7 +27,7 @@ const Information = () => {
                                 <p>Listing Notices</p>
                             </div>
                             <div className='information-listing-content'>
-                                <p>Notice regarding changes in Chief Justice’s Court, Court Nos.7 and 16 on 01.09.2025 (Monday)</p>
+                                <p>Notice regarding changes in Chief Justice’s Court, Court Nos.7 and 16 on 01.09.2026 (Monday)</p>
                             </div>
                         </div>
 
@@ -39,7 +39,7 @@ const Information = () => {
                                 <p>Listing Notices</p>
                             </div>
                             <div className='information-listing-content'>
-                                <p>List of oral mentioning matters before Hon’ble Courts on 01.09.2025</p>
+                                <p>List of oral mentioning matters before Hon’ble Courts on 01.09.2026</p>
                             </div>
                         </div>
 
@@ -63,7 +63,7 @@ const Information = () => {
                                 <p>Listing Notices</p>
                             </div>
                             <div className='information-listing-content'>
-                                <p>Notice regarding dispensing with publication of weekly list in the week commencing from 01.09.2025</p>
+                                <p>Notice regarding dispensing with publication of weekly list in the week commencing from 01.09.2026</p>
                             </div>
                         </div>
 
@@ -75,7 +75,7 @@ const Information = () => {
                                 <p>Listing Notices</p>
                             </div>
                             <div className='information-listing-content'>
-                                <p>Advance List of Chamber Matters likely to be listed in the week commencing from 01.09.2025 to 04.09.2025.</p>
+                                <p>Advance List of Chamber Matters likely to be listed in the week commencing from 01.09.2026 to 04.09.2026.</p>
                             </div>
                         </div>
 
@@ -87,7 +87,7 @@ const Information = () => {
                                 <p>Listing Notices</p>
                             </div>
                             <div className='information-listing-content'>
-                                <p>Notice regarding sitting of all Courts at 11.30 a.m. on 29.08.2025 (Friday)</p>
+                                <p>Notice regarding sitting of all Courts at 11.30 a.m. on 29.08.2026 (Friday)</p>
                             </div>
                         </div>
 
