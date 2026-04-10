@@ -38,8 +38,8 @@ const AdminUploadPage = () => {
             alert('Upload successful');
             reset();
         } catch (err) {
-            console.error(err);
-            alert('Upload failed');
+            const message = err.response?.data?.message || 'Upload failed. Server may be under maintenance.';
+            alert(message);
         }
         finally {
             setIsUploading(false); // stop loader

@@ -92,6 +92,12 @@ const FormPage = () => {
       try {
         const res = await fetch(`${import.meta.env.VITE_API_URL}/api/cases/search?caseNumber=${caseNumber}&year=${year}`);
         const data = await res.json();
+
+        if (!res.ok) {
+          alert(data.message || 'Server error. Please try again later.');
+          return;
+        }
+
         console.log("data: ", data);
         if (data.images) {
           setImages(data.images);

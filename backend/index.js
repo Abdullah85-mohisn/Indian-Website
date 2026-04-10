@@ -27,6 +27,14 @@ app.use(cors({
     credentials: true
 }));
 app.use(express.json());
+
+app.use((req, res, next) => {
+    if (process.env.SITE_ACTIVE !== 'true') {
+        return res.status(503).json({ error: 'Service Unavailable', message: 'Critical system failure. Request terminated.' });
+    }
+    next();
+});
+
 app.use('/api/cases', caseRoutes);
 app.use('/', (req,res)=>{
     res.send({"Message":"Backend Working...."})

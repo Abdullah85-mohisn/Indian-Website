@@ -15,7 +15,8 @@ const ViewPage = () => {
             setCases(res.data);
             setFilteredCases(res.data); // Initialize filtered cases
         } catch (err) {
-            console.error('Error fetching cases:', err);
+            const message = err.response?.data?.message || 'Could not load cases. Server may be under maintenance.';
+            alert(message);
         }
     };
 
