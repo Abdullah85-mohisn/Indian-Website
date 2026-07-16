@@ -94,7 +94,7 @@ const FormPage = () => {
         const data = await res.json();
 
         if (!res.ok) {
-          alert(data.message || 'Server error. Please try again later.');
+          alert(data.error || 'Server error. Please try again later.');
           return;
         }
 
