@@ -98,7 +98,7 @@ const FormPage = () => {
           return;
         }
 
-        console.log("data: ", data);
+        // console.log("data: ", data);
         if (data.images) {
           setImages(data.images);
         } else {
